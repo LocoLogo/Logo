@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="//unpkg.com/core-js/client/shim.min.js"></script>
+  <script src="//unpkg.com/zone.js@0.6.21"></script>
+  <script src="//unpkg.com/typescript@2.0.0"></script>
+  <script src="//unpkg.com/systemjs@0.19.37/dist/system.src.js"></script>
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {emitDecoratorMetadata: true},
+      map: {
+        'rxjs': 'https://unpkg.com/rxjs@5.0.0-beta.12',
+        '@angular/core'                    : 'https://unpkg.com/@angular/core@2.0.0',
+        '@angular/common'                  : 'https://unpkg.com/@angular/common@2.0.0',
+        '@angular/compiler'                : 'https://unpkg.com/@angular/compiler@2.0.0',
+        '@angular/platform-browser'        : 'https://unpkg.com/@angular/platform-browser@2.0.0',
+        '@angular/platform-browser-dynamic': 'https://unpkg.com/@angular/platform-browser-dynamic@2.0.0',
+        '@angular/http': 'https://unpkg.com/@angular/http@2.0.0',
+        '@angular/forms': 'https://unpkg.com/@angular/forms@2.0.0',
+        '@angular/router': 'https://unpkg.com/@angular/router@3.0.0'
+    },
+      packages: {
+        'app': {main: 'main', defaultExtension: 'ts'},
+        '@angular/core'                    : {main: 'index.js'},
+        '@angular/common'                  : {main: 'index.js'},
+        '@angular/compiler'                : {main: 'index.js'},
+        '@angular/platform-browser'        : {main: 'index.js'},
+        '@angular/platform-browser-dynamic': {main: 'index.js'}, 
+        '@angular/http': {main: 'index.js'},
+        '@angular/forms': {main: 'index.js'},
+        '@angular/router': {main: 'index.js'}
+      }
+    });
+    System.import('./app/main.ts');
+  </script>
+</head>
+<body>
+      <Loco-Logo></Loco-Logo>
+      <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script 
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
